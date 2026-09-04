@@ -216,5 +216,79 @@ footer {
     main {
         width: 95%;
     }
+    .carrossel-container {
+    flex-direction: column;
+    align-items: stretch;
+}
 
+#botao-anterior,
+#botao-proximo {
+    width: 100%;
+}
+
+#carrossel-noticia {
+    width: 100%;
+}
+
+}
+
+.logo-destaque {
+    transform: scale(1.08);
+    text-shadow: 3px 3px 0 #000000;
+}
+
+.escondido {
+    display: none;
+}
+
+#botao-secreto {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+/* CARROSSEL */
+#carrossel {
+    margin-bottom: 40px;
+}
+
+
+/* CONTAINER DO CARROSSEL */
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* NOTÍCIA DO CARROSSEL */
+#carrossel-noticia {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+
+/* BOTÕES DO CARROSSEL */
+#botao-anterior,
+#botao-proximo {
+    background-color: #b30000;
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+#botao-anterior:hover,
+#botao-proximo:hover {
+    background-color: #7a0000;
+}
+
+
+/* FOCO PELO TECLADO */
+#botao-anterior:focus,
+#botao-proximo:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 3px;
 }
