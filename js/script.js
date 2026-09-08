@@ -74,43 +74,83 @@ if (botaoSecreto && textoSecreto) {
 const noticiasCarrossel = [
 
     {
-        titulo: "Homem-Aranha é visto novamente nos céus de Nova York",
-        resumo: "Testemunhas afirmam ter visto o herói mascarado circulando pelos prédios de Manhattan.",
+        titulo: "Homem-Aranha é multado por estacionar teia em local proibido",
+        resumo: "A prefeitura afirma que o herói deixou teias presas em postes, placas e até em um carrinho de cachorro-quente.",
         imagem: "img/homem-aranha.jpg",
         link: "noticia1.html",
-        alt: "Homem-Aranha balançando entre prédios de Nova York"
+        alt: "Homem-Aranha em Nova York"
     },
 
     {
-        titulo: "J. Jonah Jameson culpa Homem-Aranha pelo preço da pizza",
-        resumo: "O editor do Clarim Diário voltou a fazer uma acusação absurda contra o herói mascarado.",
+        titulo: "J. Jonah Jameson culpa Homem-Aranha pelo aumento do preço da pizza",
+        resumo: "O editor afirma possuir provas irrefutáveis após encontrar teia perto de uma pizzaria.",
         imagem: "img/jameson.jpg",
         link: "noticia2.html",
-        alt: "J. Jonah Jameson no escritório do Clarim Diário"
+        alt: "J. Jonah Jameson no Clarim Diário"
     },
 
     {
-        titulo: "Professor misterioso é apontado como novo Duende Verde",
-        resumo: "Moradores relatam uma aparição surreal de um novo vilão causando caos acadêmico por Manhattan.",
+        titulo: "Professor é apontado como novo Duende Verde após anunciar prova surpresa",
+        resumo: "Alunos relatam ameaças de recuperação, apagadores voadores e comportamento altamente suspeito.",
         imagem: "img/vilao.jpg",
         link: "noticia3.html",
-        alt: "Vilão sobrevoando os prédios de Manhattan"
+        alt: "Professor caracterizado como vilão"
     },
 
     {
-        titulo: "Heróis são vistos reunidos secretamente em Manhattan",
-        resumo: "Uma reunião misteriosa entre heróis aumenta as suspeitas de uma nova ameaça.",
+        titulo: "Vingadores marcam reunião e esquecem de enviar o link do Teams",
+        resumo: "Heróis passam quarenta minutos perguntando se todos conseguem ouvir enquanto Nick Fury tenta compartilhar a tela.",
         imagem: "img/herois.jpg",
         link: "noticia4.html",
-        alt: "Heróis reunidos em Manhattan"
+        alt: "Grupo de heróis reunidos"
     },
 
     {
-        titulo: "Portal dimensional surge sobre Nova York",
-        resumo: "Objetos estranhos começam a cair do céu após o aparecimento de uma anomalia dimensional.",
+        titulo: "Portal revela universo onde pizza com abacaxi é patrimônio cultural",
+        resumo: "Doutor Estranho classifica a dimensão como uma ameaça extremamente preocupante.",
         imagem: "img/multiverso.jpg",
         link: "noticia5.html",
-        alt: "Portal dimensional surgindo sobre Nova York"
+        alt: "Portal dimensional surgindo em Nova York"
+    },
+
+    {
+        titulo: "Doutor Estranho abre portal errado e manda 37 passageiros para Osasco",
+        resumo: "Passageiros perceberam o erro quando o próprio mago perguntou onde estava.",
+        imagem: "img/doutor-estranho.jpg",
+        link: "noticia6.html",
+        alt: "Doutor Estranho abrindo um portal"
+    },
+
+    {
+        titulo: "Homem-Aranha é flagrado usando Wi-Fi do vizinho durante patrulha",
+        resumo: "Morador mudou a senha após descobrir um dispositivo misterioso conectado todas as madrugadas.",
+        imagem: "img/homem-aranha-wifi.jpg",
+        link: "noticia7.html",
+        alt: "Homem-Aranha usando um celular"
+    },
+
+    {
+        titulo: "Thor perde Mjölnir e oferece recompensa de dois combos",
+        resumo: "O Deus do Trovão acredita que pode ter deixado o martelo entre Manhattan, Asgard ou debaixo do sofá.",
+        imagem: "img/thor.jpg",
+        link: "noticia8.html",
+        alt: "Thor procurando seu martelo"
+    },
+
+    {
+        titulo: "Demolidor é acusado de furar fila e responde: não vi ninguém esperando",
+        resumo: "Advogados afirmam que a declaração tecnicamente não ajudou muito na defesa.",
+        imagem: "img/demolidor.jpg",
+        link: "noticia9.html",
+        alt: "Demolidor em uma rua de Nova York"
+    },
+
+    {
+        titulo: "Venom é expulso de rodízio após restaurante registrar prejuízo impossível",
+        resumo: "Funcionários afirmam que o simbionte interpretou a expressão rodízio ilimitado de maneira literal.",
+        imagem: "img/venom.jpg",
+        link: "noticia10.html",
+        alt: "Venom em um restaurante"
     }
 
 ];
