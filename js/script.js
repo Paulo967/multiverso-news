@@ -264,10 +264,146 @@ if (botaoMenu && menuPrincipal) {
         const menuEstaAberto =
             menuPrincipal.classList.contains("menu-aberto");
 
+
         botaoMenu.setAttribute(
             "aria-expanded",
             menuEstaAberto
         );
+
+
+        if (menuEstaAberto) {
+
+            botaoMenu.textContent = "✕ Fechar";
+
+        } else {
+
+            botaoMenu.textContent = "☰ Menu";
+
+        }
+
+    });
+
+}
+
+let cliquesLogo = 0;
+
+if (logo) {
+    logo.addEventListener("click", function () {
+
+        cliquesLogo++;
+
+        if (cliquesLogo === 5) {
+            alert("JAVA CLARAMENTE É MELHOR QUE PYTHON");
+
+            cliquesLogo = 0;
+        }
+
+    });
+}
+
+let codigoDigitado = "";
+
+
+document.addEventListener("keydown", function (evento) {
+
+    codigoDigitado += evento.key.toUpperCase();
+
+    if (codigoDigitado.includes("PETRIT")) {
+
+        alert(
+            "Parabéns! Você foi contratado pelo Clarim Diário.\n\nSalário: exposição e cobrança do Jameson."
+        );
+
+        codigoDigitado = "";
+    }
+
+    if (codigoDigitado.length > 20) {
+        codigoDigitado = "";
+    }
+
+});
+
+const plantaoClarim = document.querySelector("#plantao-clarim");
+
+if (plantaoClarim) {
+
+    setTimeout(function () {
+
+        plantaoClarim.textContent =
+            '"O site do PETRIT é 100% mais verdadeiro que os outros sites" - Gabriel Careca';
+
+        plantaoClarim.classList.remove("plantao-escondido");
+        plantaoClarim.classList.add("plantao-visivel");
+
+        setTimeout(function () {
+
+            plantaoClarim.classList.remove("plantao-visivel");
+            plantaoClarim.classList.add("plantao-escondido");
+
+        }, 5000);
+
+    }, 10000);
+
+}
+
+const linksMenu = document.querySelectorAll("#menu-principal a");
+
+linksMenu.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        if (menuPrincipal.classList.contains("menu-aberto")) {
+
+            menuPrincipal.classList.remove("menu-aberto");
+
+            botaoMenu.setAttribute("aria-expanded", "false");
+
+            botaoMenu.textContent = "☰ Menu";
+        }
+
+    });
+
+});
+
+/* ========================================
+   EASTER EGG - PERSEGUIÇÃO
+======================================== */
+
+const aranhaSecreta =
+    document.querySelector("#aranha-secreta");
+
+const easterCorrida =
+    document.querySelector("#easter-corrida");
+
+
+if (aranhaSecreta && easterCorrida) {
+
+    aranhaSecreta.addEventListener("click", function () {
+
+        /* Mostra a tela */
+
+        easterCorrida.classList.remove(
+            "easter-escondido"
+        );
+
+        easterCorrida.classList.add(
+            "easter-ativo"
+        );
+
+
+        /* Depois da animação, tudo desaparece */
+
+        setTimeout(function () {
+
+            easterCorrida.classList.remove(
+                "easter-ativo"
+            );
+
+            easterCorrida.classList.add(
+                "easter-escondido"
+            );
+
+        }, 6000);
 
     });
 

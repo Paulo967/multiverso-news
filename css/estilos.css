@@ -605,119 +605,109 @@ footer {
 }
 
 
-/* =========================
-   CELULAR
-========================= */
+/*  CELULAR */
 
 @media (max-width: 600px) {
 
     .logo-site {
         font-size: 30px;
-
         letter-spacing: 2px;
     }
 
-
-    /* MOSTRA BOTÃO MOBILE */
     #botao-menu {
         display: block;
+
+        width: 100%;
+        max-width: 394px;
+
+        margin: 20px auto 0;
+
+        background-color: #111111;
+        color: white;
+
+        border: none;
+        border-radius: 6px 6px 0 0;
+
+        padding: 14px 18px;
+
+        font-size: 17px;
+        font-weight: bold;
+
+        cursor: pointer;
     }
 
-
-    /* ESCONDE MENU */
     #menu-principal {
         display: none;
 
+        width: 100%;
+        max-width: 394px;
+
+        margin: 0 auto;
+
+        background-color: #111111;
+
         flex-direction: column;
+        align-items: stretch;
 
-        align-items: center;
+        gap: 0;
 
-        gap: 18px;
+        padding: 0;
     }
 
-
-    /* MOSTRA MENU PELO JS */
     #menu-principal.menu-aberto {
         display: flex;
     }
 
+    #menu-principal a {
+        display: block;
 
-    /* UMA COLUNA */
+        width: 100%;
+
+        padding: 14px 18px;
+
+        text-align: center;
+
+        border-top: 1px solid #2f2f2f;
+    }
+
+    #menu-principal a:hover {
+        background-color: #1d1d1d;
+    }
+
     .cards-noticias {
         grid-template-columns: 1fr;
     }
-
 
     main {
         width: 95%;
     }
 
-
-    section {
-        margin-bottom: 35px;
-    }
-
-
-    section > h2 {
-        font-size: 23px;
-    }
-
-
-    article {
-        padding: 16px;
-    }
-
-
-    /* MANCHETE PRINCIPAL */
-    #homem-aranha article h2 {
-        font-size: 27px;
-    }
-
-
-    /* IMAGENS DOS CARDS */
-    .cards-noticias article img {
-        width: calc(100% + 32px);
-
-        margin-left: -16px;
-
-        margin-top: -16px;
-    }
-
-
-    /* CARROSSEL MOBILE */
     .carrossel-container {
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 10px;
     }
-
 
     #carrossel-noticia {
         width: 100%;
     }
 
-
     #botao-anterior,
     #botao-proximo {
         width: 100%;
-
         height: auto;
-
         padding: 12px;
-
         border-radius: 4px;
-
         font-size: 18px;
     }
+}
 
 
     #mensagem-secreta {
         padding: 22px 16px;
     }
 
-}
+
 
 #carrossel-noticia {
     opacity: 1;
@@ -730,4 +720,524 @@ footer {
 #carrossel-noticia.saindo {
     opacity: 0;
     transform: translateX(-20px);
+}
+
+#plantao-clarim {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    max-width: 360px;
+
+    background-color: #111111;
+    color: white;
+
+    border-left: 6px solid #b30000;
+
+    padding: 18px 20px;
+
+    font-weight: bold;
+    line-height: 1.4;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    z-index: 1000;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.plantao-escondido {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+.plantao-visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================
+   EASTER EGG - PERSEGUIÇÃO
+======================================== */
+
+
+/* Aranha escondida no canto */
+
+#aranha-secreta {
+    position: fixed;
+
+    left: 12px;
+    bottom: 12px;
+
+    background: transparent;
+    border: none;
+
+    font-size: 26px;
+
+    padding: 4px;
+
+    cursor: pointer;
+
+    z-index: 2000;
+
+    opacity: 0.55;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+#aranha-secreta:hover {
+    transform: scale(1.35) rotate(12deg);
+    opacity: 1;
+}
+
+
+
+/* ========================================
+   TELA DO EASTER EGG
+======================================== */
+
+#easter-corrida {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    z-index: 5000;
+
+    overflow: hidden;
+}
+
+
+.easter-escondido {
+    display: none;
+}
+
+
+.easter-ativo {
+    display: block;
+}
+
+
+
+/* ========================================
+   AVISO
+======================================== */
+
+.alerta-easter {
+    position: absolute;
+
+    top: 12%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 6vw, 60px);
+
+    font-weight: bold;
+
+    text-shadow:
+        3px 3px 0 #b30000,
+        -2px -2px 0 #000;
+}
+
+
+
+/* ========================================
+   PAULO / HOMEM-ARANHA
+======================================== */
+
+#paulo-aranha {
+    position: absolute;
+
+    width: 130px;
+
+    left: -180px;
+    bottom: 15%;
+
+    z-index: 2;
+}
+
+
+
+/* ========================================
+   DUENDE VERDE
+======================================== */
+
+#duende-wrapper {
+    position: absolute;
+
+    width: 140px;
+
+    left: -220px;
+    bottom: 10%;
+
+    z-index: 3;
+}
+
+
+#professor-duende {
+    width: 140px;
+
+    display: block;
+}
+
+
+
+/* ========================================
+   BALÃO DO DUENDE
+======================================== */
+
+#balao-duende {
+    position: absolute;
+
+    left: 90px;
+    top: -75px;
+
+    width: 200px;
+
+    background: white;
+    color: #111;
+
+    padding: 12px 15px;
+
+    border: 3px solid #111;
+
+    border-radius: 20px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: scale(0.6);
+
+    transform-origin: bottom left;
+
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Pontinha do balão */
+
+#balao-duende::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+    bottom: -20px;
+
+    border-width: 10px;
+
+    border-style: solid;
+
+    border-color:
+        #111
+        transparent
+        transparent
+        transparent;
+}
+
+
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+
+.easter-ativo #paulo-aranha {
+    animation: volta-paulo 5s ease-in-out forwards;
+}
+
+
+.easter-ativo #duende-wrapper {
+    animation: volta-duende 5s ease-in-out 0.45s forwards;
+}
+
+
+.easter-ativo #balao-duende {
+    animation: aparecer-balao 0.4s ease 1.4s forwards;
+}
+
+
+
+/* ========================================
+   CAMINHO DO PAULO
+======================================== */
+
+@keyframes volta-paulo {
+
+    0% {
+        left: -180px;
+        bottom: 15%;
+
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+
+    12% {
+        left: 15%;
+        bottom: 20%;
+
+        transform:
+            rotate(-12deg)
+            scale(1);
+    }
+
+
+    25% {
+        left: 55%;
+        bottom: 65%;
+
+        transform:
+            rotate(15deg)
+            scale(1.05);
+    }
+
+
+    38% {
+        left: 82%;
+        bottom: 55%;
+
+        transform:
+            rotate(25deg)
+            scale(1);
+    }
+
+
+    50% {
+        left: 75%;
+        bottom: 10%;
+
+        transform:
+            rotate(-15deg)
+            scale(1.05);
+    }
+
+
+    62% {
+        left: 35%;
+        bottom: 8%;
+
+        transform:
+            rotate(-25deg)
+            scale(1);
+    }
+
+
+    74% {
+        left: 10%;
+        bottom: 50%;
+
+        transform:
+            rotate(20deg)
+            scale(1.05);
+    }
+
+
+    86% {
+        left: 55%;
+        bottom: 72%;
+
+        transform:
+            rotate(-15deg)
+            scale(1);
+    }
+
+
+    100% {
+        left: 110%;
+        bottom: 25%;
+
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+}
+
+
+
+/* ========================================
+   CAMINHO DO DUENDE
+======================================== */
+
+@keyframes volta-duende {
+
+    0% {
+        left: -220px;
+        bottom: 10%;
+
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+
+    12% {
+        left: 10%;
+        bottom: 15%;
+
+        transform:
+            rotate(-10deg)
+            scale(1);
+    }
+
+
+    25% {
+        left: 48%;
+        bottom: 58%;
+
+        transform:
+            rotate(12deg)
+            scale(1.05);
+    }
+
+
+    38% {
+        left: 75%;
+        bottom: 48%;
+
+        transform:
+            rotate(20deg)
+            scale(1);
+    }
+
+
+    50% {
+        left: 68%;
+        bottom: 5%;
+
+        transform:
+            rotate(-12deg)
+            scale(1.05);
+    }
+
+
+    62% {
+        left: 28%;
+        bottom: 5%;
+
+        transform:
+            rotate(-20deg)
+            scale(1);
+    }
+
+
+    74% {
+        left: 5%;
+        bottom: 43%;
+
+        transform:
+            rotate(18deg)
+            scale(1.05);
+    }
+
+
+    86% {
+        left: 48%;
+        bottom: 65%;
+
+        transform:
+            rotate(-12deg)
+            scale(1);
+    }
+
+
+    100% {
+        left: 110%;
+        bottom: 20%;
+
+        transform:
+            rotate(0deg)
+            scale(1);
+    }
+
+}
+
+
+
+/* ========================================
+   APARIÇÃO DO BALÃO
+======================================== */
+
+@keyframes aparecer-balao {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.6);
+    }
+
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    #paulo-aranha {
+        width: 90px;
+    }
+
+
+    #duende-wrapper {
+        width: 95px;
+    }
+
+
+    #professor-duende {
+        width: 95px;
+    }
+
+
+    #balao-duende {
+        width: 150px;
+
+        left: 55px;
+        top: -65px;
+
+        padding: 9px 10px;
+
+        font-size: 13px;
+    }
+
+
+    .alerta-easter {
+        top: 8%;
+
+        padding: 0 15px;
+    }
+
 }
