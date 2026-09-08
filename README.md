@@ -4,6 +4,8 @@ Portal de notícias fictício inspirado no universo dos super-heróis.
 
 O projeto foi desenvolvido com HTML, CSS e JavaScript puro, com foco em responsividade, acessibilidade, organização semântica e interatividade.
 
+![Preview do Clarim Diário](img/preview-site.png)
+
 ## 🚀 Acesse o projeto
 
 https://paulo967.github.io/multiverso-news/
@@ -51,6 +53,21 @@ O objetivo foi praticar:
 - eventos e animações
 - Git e GitHub
 - publicação com GitHub Pages
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, pratiquei:
+
+- Estruturação semântica com HTML
+- Responsividade com CSS
+- Flexbox e Grid
+- Manipulação do DOM com JavaScript
+- Eventos e interações
+- Animações com CSS
+- Organização de arquivos e páginas
+- Controle de versão com Git
+- GitHub e GitHub Pages
+- Noções de SEO e acessibilidade
 
 ## 👨‍💻 Autor
 
