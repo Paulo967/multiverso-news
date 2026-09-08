@@ -12,54 +12,105 @@ html {
 }
 
 
-/* CORPO */
+/* CORPO DA PÁGINA */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.94),
+            rgba(255, 255, 255, 0.94)
+        ),
+        repeating-linear-gradient(
+            0deg,
+            #eeeeee 0,
+            #eeeeee 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
     color: #111111;
 }
 
 
 /* CABEÇALHO */
 header {
-    background-color: #b30000;
+    background: linear-gradient(
+        135deg,
+        #8b0000,
+        #c40000
+    );
+
     color: white;
-    padding: 25px;
+
+    padding: 30px 20px 0;
+
     text-align: center;
+
+    border-bottom: 6px solid #111111;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 
-/* LOGO */
+/* LOGO DO SITE */
 .logo-site {
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 52px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+
+    padding: 12px 0;
+
+    margin: 0 auto;
+
+    max-width: 900px;
+
+    transition:
+        transform 0.3s ease,
+        text-shadow 0.3s ease;
 }
 
 
-/* EFEITO DO LOGO */
+/* EFEITO DO LOGO PELO JAVASCRIPT */
 .logo-destaque {
     transform: scale(1.08);
-    text-shadow: 3px 3px 0 #000000;
+
+    text-shadow:
+        3px 3px 0 #000000;
 }
 
 
 /* SLOGAN */
 header p {
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 
 /* MENU */
 nav {
-    margin-top: 20px;
+    margin-top: 25px;
+
     background-color: #111111;
-    padding: 12px;
+
+    padding: 15px;
 
     display: flex;
+
     justify-content: center;
-    gap: 20px;
+
+    align-items: center;
+
+    gap: 28px;
+
     flex-wrap: wrap;
 }
 
@@ -67,53 +118,111 @@ nav {
 /* LINKS DO MENU */
 nav a {
     color: white;
+
     text-decoration: none;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    position: relative;
 }
 
 
-/* HOVER */
-nav a:hover {
-    text-decoration: underline;
+/* LINHA ANIMADA EMBAIXO DO LINK */
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: #ffcc00;
+
+    transition: width 0.3s ease;
 }
 
 
-/* BOTÃO MENU MOBILE */
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* BOTÃO DO MENU MOBILE */
 #botao-menu {
     display: none;
+
     background-color: #111111;
+
     color: white;
+
     border: none;
+
     padding: 10px 16px;
+
     margin: 20px auto 0;
+
     cursor: pointer;
+
     font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 4px;
 }
 
 
 /* CONTEÚDO PRINCIPAL */
 main {
     width: 90%;
+
     max-width: 1200px;
-    margin: 30px auto;
+
+    margin: 35px auto;
 }
 
 
 /* SEÇÕES */
 section {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
+
     scroll-margin-top: 20px;
 }
 
 
-/* TÍTULOS */
+/* TÍTULOS DAS SEÇÕES */
 section > h2 {
-    margin-bottom: 18px;
-    font-size: 28px;
+    font-family: Georgia, "Times New Roman", serif;
+
+    text-transform: uppercase;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 8px;
+
+    border-bottom: 4px solid #b30000;
 }
 
 
-h2,
-h3 {
+/* TÍTULOS DOS ARTIGOS */
+article h2,
+article h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    line-height: 1.2;
+
     margin-bottom: 12px;
 }
 
@@ -121,16 +230,34 @@ h3 {
 /* ARTIGOS */
 article {
     background-color: white;
+
     padding: 20px;
+
     margin-bottom: 25px;
-    border: 1px solid #cccccc;
+
+    border: 1px solid #dddddd;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* HOVER DOS ARTIGOS */
+article:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
 /* IMAGENS */
 article img {
     width: 100%;
+
     height: auto;
+
     margin-bottom: 15px;
 }
 
@@ -138,20 +265,33 @@ article img {
 /* PARÁGRAFOS */
 article p {
     margin-bottom: 15px;
-    line-height: 1.6;
+
+    line-height: 1.65;
 }
 
 
-/* LINKS */
+/* LINKS DOS ARTIGOS */
 article a {
     color: #b30000;
+
     font-weight: bold;
+
     text-decoration: none;
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease;
 }
 
 
 article a:hover {
-    text-decoration: underline;
+    transform: translateX(4px);
+
+    color: #7a0000;
 }
 
 
@@ -159,83 +299,265 @@ article a:hover {
 a:focus,
 button:focus {
     outline: 3px solid #ffcc00;
+
     outline-offset: 3px;
 }
 
 
-/* CARDS */
+/* =========================
+   NOTÍCIA PRINCIPAL
+========================= */
+
+#homem-aranha article {
+    position: relative;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-bottom: 6px solid #b30000;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+#homem-aranha article img {
+    max-height: 520px;
+
+    object-fit: cover;
+}
+
+
+#homem-aranha article h2 {
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    text-transform: uppercase;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CARDS DAS NOTÍCIAS
+========================= */
+
 .cards-noticias {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
 }
 
 
 .cards-noticias article {
     margin-bottom: 0;
+
+    border: none;
+
+    border-top: 5px solid #b30000;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
 }
 
 
-/* CARROSSEL */
+/* IMAGEM DOS CARDS */
+.cards-noticias article img {
+    width: calc(100% + 40px);
+
+    margin-left: -20px;
+
+    margin-top: -20px;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+}
+
+
+/* LINK NO FINAL DOS CARDS */
+.cards-noticias article a {
+    margin-top: auto;
+
+    padding-top: 15px;
+}
+
+
+/* =========================
+   CARROSSEL
+========================= */
+
 #carrossel {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 
 .carrossel-container {
     display: flex;
+
     align-items: center;
+
     gap: 20px;
 }
 
 
 #carrossel-noticia {
     flex: 1;
+
     margin-bottom: 0;
+
+    border: none;
+
+    border-top: 5px solid #b30000;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 
+/* BOTÕES DO CARROSSEL */
 #botao-anterior,
 #botao-proximo {
     background-color: #b30000;
+
     color: white;
+
     border: none;
-    padding: 14px 18px;
+
+    border-radius: 50%;
+
+    width: 55px;
+
+    height: 55px;
+
+    padding: 0;
+
     font-size: 24px;
+
     cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 
 #botao-anterior:hover,
 #botao-proximo:hover {
     background-color: #7a0000;
+
+    transform: scale(1.1);
 }
 
 
-/* MENSAGEM SECRETA */
+/* =========================
+   MENSAGEM SECRETA
+========================= */
+
+#mensagem-secreta {
+    background-color: #111111;
+
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 4px dashed #b30000;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+#mensagem-secreta h2 {
+    color: #ffcc00;
+
+    border-bottom-color: #ffcc00;
+}
+
+
+/* TEXTO ESCONDIDO */
 .escondido {
     display: none;
 }
 
 
+/* BOTÃO SECRETO */
 #botao-secreto {
-    padding: 10px 16px;
+    background-color: #b30000;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
     cursor: pointer;
+
+    font-weight: bold;
+
+    border-radius: 4px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 
-/* ASIDE */
+#botao-secreto:hover {
+    background-color: #7a0000;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   ASIDE
+========================= */
+
 aside {
     background-color: white;
+
     padding: 20px;
+
     border-left: 5px solid #b30000;
+
     margin-bottom: 25px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 
 aside a {
     color: #003b7a;
+
     text-decoration: none;
+
     line-height: 2;
 }
 
@@ -245,70 +567,167 @@ aside a:hover {
 }
 
 
-/* RODAPÉ */
+/* =========================
+   RODAPÉ
+========================= */
+
 footer {
     background-color: #111111;
+
     color: white;
+
     text-align: center;
-    padding: 25px;
+
+    padding: 30px 20px;
+
     margin-top: 40px;
+
+    border-top: 6px solid #b30000;
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 900px) {
 
     .cards-noticias {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    #homem-aranha article h2 {
+        font-size: 34px;
     }
 
 }
 
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
+
 @media (max-width: 600px) {
 
     .logo-site {
         font-size: 30px;
+
+        letter-spacing: 2px;
     }
 
+
+    /* MOSTRA BOTÃO MOBILE */
     #botao-menu {
         display: block;
     }
 
+
+    /* ESCONDE MENU */
     #menu-principal {
         display: none;
+
         flex-direction: column;
+
         align-items: center;
+
+        gap: 18px;
     }
 
+
+    /* MOSTRA MENU PELO JS */
     #menu-principal.menu-aberto {
         display: flex;
     }
 
+
+    /* UMA COLUNA */
     .cards-noticias {
         grid-template-columns: 1fr;
     }
+
 
     main {
         width: 95%;
     }
 
+
+    section {
+        margin-bottom: 35px;
+    }
+
+
+    section > h2 {
+        font-size: 23px;
+    }
+
+
+    article {
+        padding: 16px;
+    }
+
+
+    /* MANCHETE PRINCIPAL */
+    #homem-aranha article h2 {
+        font-size: 27px;
+    }
+
+
+    /* IMAGENS DOS CARDS */
+    .cards-noticias article img {
+        width: calc(100% + 32px);
+
+        margin-left: -16px;
+
+        margin-top: -16px;
+    }
+
+
+    /* CARROSSEL MOBILE */
     .carrossel-container {
         flex-direction: column;
+
         align-items: stretch;
-        gap: 8px;
+
+        gap: 10px;
     }
+
 
     #carrossel-noticia {
         width: 100%;
     }
 
+
     #botao-anterior,
     #botao-proximo {
         width: 100%;
-        padding: 10px;
+
+        height: auto;
+
+        padding: 12px;
+
+        border-radius: 4px;
+
         font-size: 18px;
     }
 
+
+    #mensagem-secreta {
+        padding: 22px 16px;
+    }
+
+}
+
+#carrossel-noticia {
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+#carrossel-noticia.saindo {
+    opacity: 0;
+    transform: translateX(-20px);
 }

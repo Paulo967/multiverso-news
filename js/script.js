@@ -176,21 +176,40 @@ const botaoAnterior =
 
 const botaoProximo =
     document.querySelector("#botao-proximo");
+setInterval(function () {
 
+    indiceAtual++;
+
+    if (indiceAtual >= noticiasCarrossel.length) {
+        indiceAtual = 0;
+    }
+
+    atualizarCarrossel();
+
+}, 5000);
 
 function atualizarCarrossel() {
 
     const noticia = noticiasCarrossel[indiceAtual];
 
-    imagemCarrossel.src = noticia.imagem;
-    imagemCarrossel.alt = noticia.alt;
+    const carrosselNoticia =
+        document.querySelector("#carrossel-noticia");
 
-    tituloCarrossel.textContent = noticia.titulo;
+    carrosselNoticia.classList.add("saindo");
 
-    resumoCarrossel.textContent = noticia.resumo;
+    setTimeout(function () {
 
-    linkCarrossel.href = noticia.link;
+        imagemCarrossel.src = noticia.imagem;
+        imagemCarrossel.alt = noticia.alt;
 
+        tituloCarrossel.textContent = noticia.titulo;
+        resumoCarrossel.textContent = noticia.resumo;
+
+        linkCarrossel.href = noticia.link;
+
+        carrosselNoticia.classList.remove("saindo");
+
+    }, 400);
 }
 
 
