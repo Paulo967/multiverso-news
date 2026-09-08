@@ -25,7 +25,15 @@
 
         <p>A verdade acima de tudo!</p>
 
-        <nav>
+        <button
+            id="botao-menu"
+            aria-expanded="false"
+            aria-controls="menu-principal"
+        >
+            ☰ Menu
+        </button>
+
+        <nav id="menu-principal">
             <a href="index.html">Início</a>
             <a href="#homem-aranha">Homem-Aranha</a>
             <a href="#herois">Heróis</a>
@@ -66,47 +74,57 @@
 
         </section>
 
-        <!-- CARROSSEL DE NOTÍCIAS -->
-<section id="carrossel">
 
-    <h2>Destaques</h2>
+        <!-- CARROSSEL -->
+        <section id="carrossel">
 
-    <div class="carrossel-container">
+            <h2>Destaques</h2>
 
-        <button id="botao-anterior">
-            ←
-        </button>
+            <div class="carrossel-container">
 
-        <article id="carrossel-noticia">
+                <button
+                    id="botao-anterior"
+                    aria-label="Notícia anterior"
+                >
+                    ←
+                </button>
 
-            <img
-                id="carrossel-imagem"
-                src="img/homem-aranha.jpg"
-                alt="Homem-Aranha balançando entre prédios de Nova York"
-            >
+                <article id="carrossel-noticia">
 
-            <h3 id="carrossel-titulo">
-                Homem-Aranha é visto novamente nos céus de Nova York
-            </h3>
+                    <img
+                        id="carrossel-imagem"
+                        src="img/homem-aranha.jpg"
+                        alt="Homem-Aranha balançando entre prédios de Nova York"
+                    >
 
-            <p id="carrossel-resumo">
-                Testemunhas afirmam ter visto o herói mascarado
-                circulando pelos prédios de Manhattan.
-            </p>
+                    <h3 id="carrossel-titulo">
+                        Homem-Aranha é visto novamente nos céus de Nova York
+                    </h3>
 
-            <a id="carrossel-link" href="noticia1.html">
-                Leia a notícia completa
-            </a>
+                    <p id="carrossel-resumo">
+                        Testemunhas afirmam ter visto o herói mascarado
+                        circulando pelos prédios de Manhattan.
+                    </p>
 
-        </article>
+                    <a
+                        id="carrossel-link"
+                        href="noticia1.html"
+                    >
+                        Leia a notícia completa
+                    </a>
 
-        <button id="botao-proximo">
-            →
-        </button>
+                </article>
 
-    </div>
+                <button
+                    id="botao-proximo"
+                    aria-label="Próxima notícia"
+                >
+                    →
+                </button>
 
-</section>
+            </div>
+
+        </section>
 
 
         <!-- NOTÍCIAS SECUNDÁRIAS -->
@@ -116,7 +134,6 @@
 
             <div class="cards-noticias">
 
-                <!-- NOTÍCIA 2 -->
                 <article>
 
                     <img
@@ -140,7 +157,6 @@
                 </article>
 
 
-                <!-- NOTÍCIA 3 -->
                 <article>
 
                     <img
@@ -164,7 +180,6 @@
                 </article>
 
 
-                <!-- NOTÍCIA EXTRA -->
                 <article>
 
                     <img
@@ -181,8 +196,8 @@
                         repentinamente no céu de Nova York.
                     </p>
 
-                    <a href="#multiverso">
-                        Ver notícias sobre o Multiverso
+                    <a href="noticia5.html">
+                        Leia a notícia completa sobre o Multiverso
                     </a>
 
                 </article>
@@ -192,7 +207,7 @@
         </section>
 
 
-        <!-- SEÇÃO HERÓIS -->
+        <!-- HERÓIS -->
         <section id="herois">
 
             <h2>Heróis</h2>
@@ -212,7 +227,9 @@
                     Testemunhas afirmam que vários heróis foram vistos reunidos
                     em Manhattan após uma estranha movimentação na cidade.
                 </p>
-                <a href="noticia4.html">Leia a notícia completa sobre os heróis
+
+                <a href="noticia4.html">
+                    Leia a notícia completa sobre os heróis
                 </a>
 
             </article>
@@ -220,7 +237,7 @@
         </section>
 
 
-        <!-- SEÇÃO VILÕES -->
+        <!-- VILÕES -->
         <section id="viloes">
 
             <h2>Vilões</h2>
@@ -250,7 +267,7 @@
         </section>
 
 
-        <!-- SEÇÃO MULTIVERSO -->
+        <!-- MULTIVERSO -->
         <section id="multiverso">
 
             <h2>Multiverso</h2>
@@ -270,25 +287,30 @@
                     Cientistas ainda não sabem explicar uma anomalia
                     dimensional observada sobre Manhattan.
                 </p>
-                <a href="noticia5.html">Leia a notícia completa sobre o Multiverso
+
+                <a href="noticia5.html">
+                    Leia a notícia completa sobre o Multiverso
                 </a>
 
             </article>
 
         </section>
+
+
+        <!-- MENSAGEM SECRETA -->
         <section id="mensagem-secreta">
 
-    <h2>Mensagem do Clarim</h2>
+            <h2>Mensagem do Clarim</h2>
 
-    <button id="botao-secreto">
-        Revelar mensagem
-    </button>
+            <button id="botao-secreto">
+                Revelar mensagem
+            </button>
 
-    <p id="texto-secreto" class="escondido">
-        J. Jonah Jameson ainda acredita que o Homem-Aranha é culpado por tudo.
-    </p>
+            <p id="texto-secreto" class="escondido">
+                J. Jonah Jameson ainda acredita que o Homem-Aranha é culpado por tudo.
+            </p>
 
-</section>
+        </section>
 
     </main>
 

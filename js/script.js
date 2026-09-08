@@ -1,15 +1,21 @@
+// VARIÁVEIS BÁSICAS
 const nomePortal = "Clarim Diário";
 
-let totalNoticias = 3;
+let totalNoticias = 5;
 
 console.log(nomePortal);
 console.log(totalNoticias);
+
+
+// FUNÇÃO
 function mostrarMensagem() {
     console.log("Bem-vindo ao Clarim Diário!");
 }
 
 mostrarMensagem();
 
+
+// ARRAY
 const noticias = [
     "Homem-Aranha é visto em Nova York",
     "Jameson culpa Homem-Aranha pelo preço da pizza",
@@ -18,7 +24,9 @@ const noticias = [
 
 console.log(noticias);
 
-let quantidadeNoticias = 3;
+
+// CONDICIONAL
+let quantidadeNoticias = 5;
 
 if (quantidadeNoticias > 2) {
     console.log("O portal tem várias notícias.");
@@ -26,27 +34,27 @@ if (quantidadeNoticias > 2) {
     console.log("O portal ainda tem poucas notícias.");
 }
 
-const tituloPrincipal = document.querySelector("header h1");
 
-console.log(tituloPrincipal);
-
+// LOGO
 const logo = document.querySelector(".logo-site");
 
 if (logo) {
-    logo.textContent = "CLARIM DIÁRIO ONLINE";
-}
 
-//interruptor 
-if (logo) {
+    logo.textContent = "CLARIM DIÁRIO ONLINE";
+
     logo.addEventListener("click", function () {
         logo.classList.toggle("logo-destaque");
     });
+
 }
 
+
+// MENSAGEM SECRETA
 const botaoSecreto = document.querySelector("#botao-secreto");
 const textoSecreto = document.querySelector("#texto-secreto");
 
 if (botaoSecreto && textoSecreto) {
+
     botaoSecreto.addEventListener("click", function () {
 
         textoSecreto.classList.toggle("escondido");
@@ -58,9 +66,13 @@ if (botaoSecreto && textoSecreto) {
         }
 
     });
+
 }
 
+
+// CARROSSEL
 const noticiasCarrossel = [
+
     {
         titulo: "Homem-Aranha é visto novamente nos céus de Nova York",
         resumo: "Testemunhas afirmam ter visto o herói mascarado circulando pelos prédios de Manhattan.",
@@ -100,16 +112,31 @@ const noticiasCarrossel = [
         link: "noticia5.html",
         alt: "Portal dimensional surgindo sobre Nova York"
     }
+
 ];
 
-let indiceAtual = 0;
-const imagemCarrossel = document.querySelector("#carrossel-imagem");
-const tituloCarrossel = document.querySelector("#carrossel-titulo");
-const resumoCarrossel = document.querySelector("#carrossel-resumo");
-const linkCarrossel = document.querySelector("#carrossel-link");
 
-const botaoAnterior = document.querySelector("#botao-anterior");
-const botaoProximo = document.querySelector("#botao-proximo");
+let indiceAtual = 0;
+
+
+const imagemCarrossel =
+    document.querySelector("#carrossel-imagem");
+
+const tituloCarrossel =
+    document.querySelector("#carrossel-titulo");
+
+const resumoCarrossel =
+    document.querySelector("#carrossel-resumo");
+
+const linkCarrossel =
+    document.querySelector("#carrossel-link");
+
+const botaoAnterior =
+    document.querySelector("#botao-anterior");
+
+const botaoProximo =
+    document.querySelector("#botao-proximo");
+
 
 function atualizarCarrossel() {
 
@@ -119,12 +146,16 @@ function atualizarCarrossel() {
     imagemCarrossel.alt = noticia.alt;
 
     tituloCarrossel.textContent = noticia.titulo;
+
     resumoCarrossel.textContent = noticia.resumo;
 
     linkCarrossel.href = noticia.link;
+
 }
 
+
 if (botaoProximo) {
+
     botaoProximo.addEventListener("click", function () {
 
         indiceAtual++;
@@ -136,9 +167,12 @@ if (botaoProximo) {
         atualizarCarrossel();
 
     });
+
 }
 
+
 if (botaoAnterior) {
+
     botaoAnterior.addEventListener("click", function () {
 
         indiceAtual--;
@@ -150,4 +184,32 @@ if (botaoAnterior) {
         atualizarCarrossel();
 
     });
+
+}
+
+
+// MENU MOBILE
+const botaoMenu =
+    document.querySelector("#botao-menu");
+
+const menuPrincipal =
+    document.querySelector("#menu-principal");
+
+
+if (botaoMenu && menuPrincipal) {
+
+    botaoMenu.addEventListener("click", function () {
+
+        menuPrincipal.classList.toggle("menu-aberto");
+
+        const menuEstaAberto =
+            menuPrincipal.classList.contains("menu-aberto");
+
+        botaoMenu.setAttribute(
+            "aria-expanded",
+            menuEstaAberto
+        );
+
+    });
+
 }
