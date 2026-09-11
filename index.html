@@ -2,81 +2,116 @@
 <html lang="pt-BR">
 
 <head>
+
+    <!-- Aqui eu faço os acentos, ç e outros caracteres funcionarem normalmente -->
     <meta charset="UTF-8">
 
+    <!-- Isso faz o site se adaptar ao tamanho da tela, principalmente no celular -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Aqui eu mudo o nome que aparece na aba do navegador -->
     <title>Clarim Diário | Notícias do Universo Marvel</title>
 
+    <!-- Aqui eu mudo a descrição geral do site -->
+    <!-- Essa descrição pode ser usada pelo Google e outros buscadores -->
     <meta
         name="description"
         content="Portal fictício e humorístico de notícias sobre o Homem-Aranha, heróis, vilões e acontecimentos absurdos do universo Marvel."
     >
 
-    <!-- OPEN GRAPH -->
+
+    <!-- Aqui começa a parte responsável pela prévia quando eu compartilho o site -->
+
+    <!-- Aqui eu mudo o título que aparece na prévia do link -->
     <meta
         property="og:title"
         content="Clarim Diário | Notícias do Universo Marvel"
     >
 
+    <!-- Aqui eu mudo a descrição que aparece na prévia do link -->
     <meta
         property="og:description"
         content="Portal fictício e humorístico de notícias sobre super-heróis."
     >
 
+    <!-- Aqui eu escolho qual imagem aparece quando compartilho o site -->
+    <!-- Se eu quiser mudar a foto da prévia, é aqui que eu troco o link -->
     <meta
         property="og:image"
         content="https://paulo967.github.io/multiverso-news/img/preview-site.png?v=4"
     >
 
+    <!-- Aqui eu informo que a imagem da prévia é PNG -->
     <meta property="og:image:type" content="image/png">
+
+    <!-- Aqui eu informo o tamanho da imagem de prévia -->
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
+    <!-- Aqui eu coloco qual é o endereço oficial do meu site -->
     <meta
         property="og:url"
         content="https://paulo967.github.io/multiverso-news/"
     >
 
+    <!-- Aqui eu informo que esse link é de um site -->
     <meta property="og:type" content="website">
 
-    <!-- X / TWITTER -->
+
+    <!-- Essa parte serve principalmente para a prévia no X / Twitter -->
+
+    <!-- summary_large_image faz a imagem aparecer maior na publicação -->
     <meta
         name="twitter:card"
         content="summary_large_image"
     >
 
+    <!-- Aqui eu mudo o título que aparece no X -->
     <meta
         name="twitter:title"
         content="Clarim Diário | Notícias do Universo Marvel"
     >
 
+    <!-- Aqui eu mudo a descrição da prévia no X -->
     <meta
         name="twitter:description"
         content="Portal fictício e humorístico de notícias sobre super-heróis."
     >
 
+    <!-- Aqui eu escolho a imagem que aparece quando compartilho no X -->
     <meta
         name="twitter:image"
         content="https://paulo967.github.io/multiverso-news/img/preview-site.png?v=4"
     >
 
+    <!-- Aqui eu descrevo a imagem para ajudar na acessibilidade -->
     <meta
         name="twitter:image:alt"
         content="Preview do portal Clarim Diário"
     >
 
+    <!-- Aqui eu conecto meu HTML com o arquivo de CSS -->
+    <!-- Se eu mudar o nome ou a pasta do CSS, tenho que mudar esse caminho -->
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
+
+
 <body>
 
-    <!-- CABEÇALHO -->
+
+    <!-- Aqui fica o cabeçalho que aparece no começo do site -->
     <header>
 
+        <!-- Aqui eu mudo o nome/logo principal do portal -->
         <h1 class="logo-site">CLARIM DIÁRIO</h1>
 
+        <!-- Aqui eu mudo a frase que aparece embaixo do nome -->
         <p>A verdade acima de tudo!</p>
 
+
+        <!-- Esse é o botão do menu que aparece em telas menores -->
+        <!-- O JavaScript também muda o texto dele para "Fechar" quando o menu abre -->
         <button
             id="botao-menu"
             aria-expanded="false"
@@ -85,40 +120,60 @@
             ☰ Menu
         </button>
 
+
+        <!-- Aqui ficam as opções do menu -->
         <nav id="menu-principal">
+
+            <!-- Esse volta para o começo da página -->
             <a href="index.html">Início</a>
+
+            <!-- Esse leva até a notícia principal -->
             <a href="#homem-aranha">Homem-Aranha</a>
+
+            <!-- Esse leva até a parte onde ficam os cards -->
             <a href="#noticias-secundarias">Últimas Notícias</a>
+
+            <!-- Esses três procuram os ids que eu coloquei nos cards -->
             <a href="#herois">Heróis</a>
             <a href="#viloes">Vilões</a>
             <a href="#multiverso">Multiverso</a>
+
         </nav>
 
     </header>
 
 
-    <!-- CONTEÚDO PRINCIPAL -->
+
+    <!-- Aqui começa o conteúdo principal da página -->
     <main>
 
-        <!-- NOTÍCIA PRINCIPAL -->
+
+        <!-- Essa é a notícia que aparece maior no começo do site -->
+        <!-- O id homem-aranha também é usado pelo menu -->
         <section id="homem-aranha">
 
             <article>
 
+                <!-- Aqui eu troco a imagem da notícia principal -->
+                <!-- Para mudar, eu só preciso trocar o caminho dentro do src -->
                 <img
                     src="img/homem-aranha.jpg"
                     alt="Homem-Aranha em Nova York"
                 >
 
+                <!-- Aqui eu mudo o título da notícia principal -->
                 <h2>
                     Homem-Aranha é multado por estacionar teia em local proibido
                 </h2>
 
+                <!-- Aqui eu mudo o resumo que aparece embaixo do título -->
                 <p>
                     Prefeitura afirma que o herói deixou teias presas em postes,
                     placas e até em um carrinho de cachorro-quente.
                 </p>
 
+                <!-- Aqui eu escolho qual página abre quando clico -->
+                <!-- Se eu trocar noticia1.html, ele vai abrir outra página -->
                 <a href="noticia1.html">
                     Leia a notícia sobre a multa do Homem-Aranha
                 </a>
@@ -128,13 +183,19 @@
         </section>
 
 
-        <!-- CARROSSEL -->
+
+        <!-- Aqui fica o carrossel de notícias -->
         <section id="carrossel">
 
+            <!-- Aqui eu mudo o nome dessa parte -->
             <h2>Destaques</h2>
 
+            <!-- Essa div segura todos os elementos do carrossel -->
             <div class="carrossel-container">
 
+
+                <!-- Esse botão volta uma notícia -->
+                <!-- Quem faz ele funcionar é o JavaScript -->
                 <button
                     id="botao-anterior"
                     aria-label="Notícia anterior"
@@ -142,23 +203,33 @@
                     ←
                 </button>
 
+
+                <!-- Esse article é onde o JavaScript troca as notícias -->
                 <article id="carrossel-noticia">
 
+
+                    <!-- O JavaScript muda o src dessa imagem -->
                     <img
                         id="carrossel-imagem"
                         src="img/homem-aranha.jpg"
                         alt="Homem-Aranha em Nova York"
                     >
 
+
+                    <!-- O JavaScript muda esse título -->
                     <h3 id="carrossel-titulo">
                         Homem-Aranha é multado por estacionar teia em local proibido
                     </h3>
 
+
+                    <!-- O JavaScript muda esse resumo -->
                     <p id="carrossel-resumo">
                         Prefeitura afirma que o herói deixou teias presas em postes,
                         placas e até em um carrinho de cachorro-quente.
                     </p>
 
+
+                    <!-- O JavaScript também troca o href para abrir a notícia certa -->
                     <a
                         id="carrossel-link"
                         href="noticia1.html"
@@ -168,6 +239,8 @@
 
                 </article>
 
+
+                <!-- Esse botão passa para a próxima notícia -->
                 <button
                     id="botao-proximo"
                     aria-label="Próxima notícia"
@@ -180,30 +253,40 @@
         </section>
 
 
-        <!-- NOTÍCIAS SECUNDÁRIAS -->
+
+        <!-- Aqui ficam todas as notícias menores em formato de cards -->
         <section id="noticias-secundarias">
 
+            <!-- Aqui eu mudo o título dessa parte -->
             <h2>Últimas Notícias</h2>
 
+
+            <!-- Essa div organiza todas as notícias em colunas -->
+            <!-- A quantidade de colunas é controlada no CSS -->
             <div class="cards-noticias">
+
 
                 <!-- NOTÍCIA 1 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem da notícia 1 -->
                     <img
                         src="img/homem-aranha.jpg"
                         alt="Homem-Aranha em Nova York"
                     >
 
+                    <!-- Aqui eu mudo o título da notícia 1 -->
                     <h3>
                         Homem-Aranha é multado por estacionar teia em local proibido
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo da notícia 1 -->
                     <p>
                         Prefeitura afirma que o herói deixou teias presas em postes,
                         placas e até em um carrinho de cachorro-quente.
                     </p>
 
+                    <!-- Aqui eu escolho qual HTML vai abrir -->
                     <a href="noticia1.html">
                         Leia a notícia sobre a multa do Homem-Aranha
                     </a>
@@ -211,23 +294,28 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 2 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem da notícia 2 -->
                     <img
                         src="img/jameson.jpg"
                         alt="J. Jonah Jameson no Clarim Diário"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         J. Jonah Jameson culpa Homem-Aranha pelo aumento do preço da pizza
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Editor afirma possuir “provas irrefutáveis” após encontrar
                         teia perto de uma pizzaria.
                     </p>
 
+                    <!-- Aqui eu escolho qual página vai abrir -->
                     <a href="noticia2.html">
                         Leia a notícia sobre Jameson e a pizza
                     </a>
@@ -235,22 +323,30 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 3 -->
+
+                <!-- O id viloes faz o botão "Vilões" do menu vir direto para esse card -->
                 <article id="viloes">
+
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/vilao.jpg"
                         alt="Professor caracterizado de forma humorística como vilão"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Professor é apontado como novo Duende Verde após anunciar prova surpresa
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Alunos relatam ameaças de recuperação, um apagador usado como
                         arma de precisão e comportamento altamente suspeito.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia3.html">
                         Leia a notícia sobre o novo Duende Verde
                     </a>
@@ -258,23 +354,30 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 4 -->
+
+                <!-- O id herois faz o botão "Heróis" do menu vir direto para esse card -->
                 <article id="herois">
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/herois.jpg"
                         alt="Grupo de heróis reunidos"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Vingadores marcam reunião e esquecem de enviar o link do Teams
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Heróis passam 40 minutos perguntando “vocês estão me ouvindo?”
                         enquanto Nick Fury tenta compartilhar a tela.
                     </p>
 
+                    <!-- Aqui eu escolho qual página abre -->
                     <a href="noticia4.html">
                         Leia a notícia sobre a reunião dos Vingadores
                     </a>
@@ -282,23 +385,30 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 5 -->
+
+                <!-- O id multiverso faz o botão "Multiverso" do menu vir direto para esse card -->
                 <article id="multiverso">
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/multiverso.jpg"
                         alt="Portal dimensional surgindo em Nova York"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Portal revela universo onde pizza com abacaxi é patrimônio cultural
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Doutor Estranho classificou a dimensão como uma possível ameaça
                         de nível máximo à humanidade.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia5.html">
                         Leia a notícia sobre o portal do multiverso
                     </a>
@@ -306,23 +416,28 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 6 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/doutor-estranho.jpg"
                         alt="Doutor Estranho abrindo um portal"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Doutor Estranho abre portal errado e manda 37 passageiros para Osasco
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Passageiros afirmam que só perceberam o erro quando o próprio
                         mago perguntou onde estava.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia6.html">
                         Leia a notícia sobre o portal errado
                     </a>
@@ -330,23 +445,28 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 7 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/homem-aranha-wifi.jpg"
                         alt="Homem-Aranha usando um celular"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Homem-Aranha é flagrado usando Wi-Fi do vizinho durante patrulha
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Morador afirma que mudou a senha após notar consumo misterioso
                         de internet durante a madrugada.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia7.html">
                         Leia a notícia sobre o Wi-Fi do Homem-Aranha
                     </a>
@@ -354,23 +474,28 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 8 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/thor.jpg"
                         alt="Thor procurando seu martelo"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Thor perde Mjölnir e oferece recompensa de dois combos
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Deus do Trovão diz que pode ter deixado o martelo em algum lugar
                         entre Manhattan e Asgard.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia8.html">
                         Leia a notícia sobre o Mjölnir perdido
                     </a>
@@ -378,24 +503,29 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 9 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/demolidor.jpg"
                         alt="Demolidor em uma rua de Nova York"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Demolidor é acusado de furar fila e responde:
                         “não vi ninguém esperando”
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Advogados afirmam que a declaração tecnicamente não ajudou
                         em nada a defesa do herói.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia9.html">
                         Leia a notícia sobre a confusão na fila
                     </a>
@@ -403,43 +533,54 @@
                 </article>
 
 
+
                 <!-- NOTÍCIA 10 -->
                 <article>
 
+                    <!-- Aqui eu troco a imagem -->
                     <img
                         src="img/venom.jpg"
                         alt="Venom em um restaurante"
                     >
 
+                    <!-- Aqui eu mudo o título -->
                     <h3>
                         Venom é expulso de rodízio após restaurante registrar prejuízo impossível
                     </h3>
 
+                    <!-- Aqui eu mudo o resumo -->
                     <p>
                         Funcionários afirmam que o simbionte perguntou se
                         “rodízio ilimitado” realmente significava ilimitado.
                     </p>
 
+                    <!-- Aqui eu escolho qual notícia abre -->
                     <a href="noticia10.html">
                         Leia a notícia sobre Venom no rodízio
                     </a>
 
                 </article>
 
+
             </div>
 
         </section>
 
 
-        <!-- MENSAGEM SECRETA -->
+
+        <!-- Aqui fica aquela mensagem escondida que só aparece quando clico -->
         <section id="mensagem-secreta">
 
+            <!-- Aqui eu mudo o título dessa brincadeira -->
             <h2>Mensagem do Clarim</h2>
 
+            <!-- Esse botão é usado pelo JavaScript para mostrar e esconder a mensagem -->
             <button id="botao-secreto">
                 Revelar mensagem
             </button>
 
+            <!-- Aqui eu mudo o texto da mensagem secreta -->
+            <!-- A classe escondido faz ela começar invisível -->
             <p id="texto-secreto" class="escondido">
                 J. Jonah Jameson ainda acredita que o Homem-Aranha é culpado por tudo.
             </p>
@@ -449,47 +590,86 @@
     </main>
 
 
-    <!-- RODAPÉ -->
+
+    <!-- Aqui fica o final do site -->
     <footer>
 
+        <!-- Aqui eu mudo o texto do rodapé -->
         <p>Clarim Diário - Nova York</p>
 
     </footer>
 
-   <div id="plantao-clarim" class="plantao-escondido" role="status" aria-live="polite"></div>
-</div>
 
-  <button id="aranha-secreta" aria-label="Aranha misteriosa">
-    🕷️
-</button>
 
-<div id="easter-corrida" class="easter-escondido">
+    <!-- Aqui fica o Plantão que aparece sozinho depois de alguns segundos -->
+    <!-- A frase do Plantão é colocada pelo JavaScript -->
+    <div
+        id="plantao-clarim"
+        class="plantao-escondido"
+        role="status"
+        aria-live="polite"
+    ></div>
 
-    <div class="alerta-easter">
-        ⚠ PERIGO NO CLARIM!
-    </div>
 
-    <img
-        id="paulo-aranha"
-        src="img/paulo-aranha.png"
-        alt="Homem-Aranha correndo"
+
+    <!-- Essa aranha fica no canto e funciona como botão secreto -->
+    <!-- Quando eu clico nela, começa o Easter Egg -->
+    <button
+        id="aranha-secreta"
+        aria-label="Aranha misteriosa"
     >
+        🕷️
+    </button>
 
-    <div id="duende-wrapper">
-      <img
-        id="professor-duende"
-        src="img/professor-duende.png"
-        alt="Duende Verde perseguindo"
-      >
 
-    <div id="balao-duende">
-        PETRIT, VOLTA AQUI!
+
+    <!-- Essa parte inteira começa escondida -->
+    <!-- O JavaScript mostra quando eu clico na aranha -->
+    <div id="easter-corrida" class="easter-escondido">
+
+
+        <!-- Aqui eu mudo o aviso que aparece no começo da perseguição -->
+        <div class="alerta-easter">
+            ⚠ PERIGO NO CLARIM!
+        </div>
+
+
+        <!-- Aqui eu troco a imagem de quem está fugindo -->
+        <img
+            id="paulo-aranha"
+            src="img/paulo-aranha.png"
+            alt="Homem-Aranha correndo"
+        >
+
+
+        <!-- Essa div segura o Duende e o balão juntos -->
+        <!-- Fiz assim para o balão acompanhar o Duende durante a animação -->
+        <div id="duende-wrapper">
+
+
+            <!-- Aqui eu troco a imagem do personagem que está perseguindo -->
+            <img
+                id="professor-duende"
+                src="img/professor-duende.png"
+                alt="Duende Verde perseguindo"
+            >
+
+3
+            <!-- Aqui eu mudo o que o Duende fala durante a perseguição -->
+            <div id="balao-duende">
+                PETRIT, VOLTA AQUI!
+            </div>
+
+
+        </div>
+
     </div>
-</div>
-</div>
 
-<!-- JAVASCRIPT -->
-<script src="js/script.js"></script>
+
+
+    <!-- Aqui eu conecto o HTML com o meu JavaScript -->
+    <script src="js/script.js"></script>
+
 
 </body>
 

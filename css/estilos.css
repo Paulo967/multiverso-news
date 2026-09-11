@@ -1,4 +1,4 @@
-/* RESET */
+/* Aqui eu zero as margens e espaços padrão do navegador para ter mais controle sobre o layout */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
 }
 
 
-/* ROLAGEM SUAVE */
+/* Aqui eu faço a página deslizar suavemente quando clico em links como #herois ou #viloes */
 html {
     scroll-behavior: smooth;
 }
 
 
-/* CORPO DA PÁGINA */
+/* Aqui eu controlo a aparência geral da página: fonte, fundo e cor padrão dos textos */
 body {
     font-family: Arial, Helvetica, sans-serif;
 
@@ -33,7 +33,7 @@ body {
 }
 
 
-/* CABEÇALHO */
+/* Aqui eu mudo o fundo, espaço, borda e sombra do cabeçalho vermelho */
 header {
     background: linear-gradient(
         135deg,
@@ -53,10 +53,11 @@ header {
 }
 
 
-/* LOGO DO SITE */
+/* Aqui eu controlo o tamanho, fonte e espaçamento do nome CLARIM DIÁRIO */
 .logo-site {
     font-family: Georgia, "Times New Roman", serif;
 
+    /* Se eu quiser deixar o nome CLARIM DIÁRIO maior ou menor, mudo esse número */
     font-size: 52px;
 
     font-weight: 900;
@@ -80,7 +81,7 @@ header {
 }
 
 
-/* EFEITO DO LOGO PELO JAVASCRIPT */
+/* Essa classe é colocada pelo JavaScript para aumentar o logo quando eu ativo o efeito */
 .logo-destaque {
     transform: scale(1.08);
 
@@ -89,13 +90,13 @@ header {
 }
 
 
-/* SLOGAN */
+/* Aqui eu mexo no espaço da frase que fica embaixo do nome do site */
 header p {
     margin-top: 10px;
 }
 
 
-/* MENU */
+/* Aqui eu controlo a barra preta do menu e o espaço entre as opções */
 nav {
     margin-top: 25px;
 
@@ -109,13 +110,14 @@ nav {
 
     align-items: center;
 
+    /* Aqui eu mudo a distância entre os links do menu */
     gap: 28px;
 
     flex-wrap: wrap;
 }
 
 
-/* LINKS DO MENU */
+/* Aqui eu mudo a aparência dos textos do menu */
 nav a {
     color: white;
 
@@ -133,7 +135,7 @@ nav a {
 }
 
 
-/* LINHA ANIMADA EMBAIXO DO LINK */
+/* Aqui eu crio a linha amarela que aparece embaixo do link quando passo o mouse */
 nav a::after {
     content: "";
 
@@ -158,7 +160,7 @@ nav a:hover::after {
 }
 
 
-/* BOTÃO DO MENU MOBILE */
+/* Aqui eu estilizo o botão ☰ Menu. Ele começa escondido e aparece no celular */
 #botao-menu {
     display: none;
 
@@ -182,17 +184,18 @@ nav a:hover::after {
 }
 
 
-/* CONTEÚDO PRINCIPAL */
+/* Aqui eu controlo a largura máxima do conteúdo do site e centralizo tudo */
 main {
     width: 90%;
 
+    /* Aqui eu limito o quanto o conteúdo pode ficar largo em telas grandes */
     max-width: 1200px;
 
     margin: 35px auto;
 }
 
 
-/* SEÇÕES */
+/* Aqui eu controlo o espaço entre uma seção e outra */
 section {
     margin-bottom: 45px;
 
@@ -200,7 +203,7 @@ section {
 }
 
 
-/* TÍTULOS DAS SEÇÕES */
+/* Aqui eu mudo o estilo dos títulos como Destaques e Últimas Notícias */
 section > h2 {
     font-family: Georgia, "Times New Roman", serif;
 
@@ -216,7 +219,7 @@ section > h2 {
 }
 
 
-/* TÍTULOS DOS ARTIGOS */
+/* Aqui eu mudo a fonte e o espaçamento dos títulos das notícias */
 article h2,
 article h3 {
     font-family: Georgia, "Times New Roman", serif;
@@ -227,7 +230,7 @@ article h3 {
 }
 
 
-/* ARTIGOS */
+/* Aqui eu controlo o visual padrão de cada bloco de notícia */
 article {
     background-color: white;
 
@@ -243,7 +246,7 @@ article {
 }
 
 
-/* HOVER DOS ARTIGOS */
+/* Aqui eu faço a notícia subir um pouco e ganhar sombra quando passo o mouse */
 article:hover {
     transform: translateY(-5px);
 
@@ -252,7 +255,7 @@ article:hover {
 }
 
 
-/* IMAGENS */
+/* Aqui eu faço as imagens das notícias ocuparem toda a largura do artigo */
 article img {
     width: 100%;
 
@@ -262,7 +265,7 @@ article img {
 }
 
 
-/* PARÁGRAFOS */
+/* Aqui eu controlo o espaço e a altura das linhas dos textos das notícias */
 article p {
     margin-bottom: 15px;
 
@@ -270,7 +273,7 @@ article p {
 }
 
 
-/* LINKS DOS ARTIGOS */
+/* Aqui eu mudo a cor e o efeito dos links 'Leia a notícia' */
 article a {
     color: #b30000;
 
@@ -295,7 +298,7 @@ article a:hover {
 }
 
 
-/* FOCO ACESSÍVEL */
+/* Aqui eu coloco uma borda amarela quando alguém navega usando o teclado */
 a:focus,
 button:focus {
     outline: 3px solid #ffcc00;
@@ -304,9 +307,7 @@ button:focus {
 }
 
 
-/* =========================
-   NOTÍCIA PRINCIPAL
-========================= */
+/* Aqui eu controlo a notícia principal que aparece grande no começo da página */
 
 #homem-aranha article {
     position: relative;
@@ -323,6 +324,7 @@ button:focus {
 
 
 #homem-aranha article img {
+    /* Aqui eu controlo a altura máxima da imagem principal */
     max-height: 520px;
 
     object-fit: cover;
@@ -340,14 +342,13 @@ button:focus {
 }
 
 
-/* =========================
-   CARDS DAS NOTÍCIAS
-========================= */
+/* Aqui eu controlo a grade das notícias menores */
 
 .cards-noticias {
     display: grid;
 
     grid-template-columns:
+        /* O 3 significa que no computador aparecem 3 cards por linha */
         repeat(3, 1fr);
 
     gap: 24px;
@@ -374,7 +375,7 @@ button:focus {
 }
 
 
-/* IMAGEM DOS CARDS */
+/* Aqui eu deixo a imagem dos cards ocupando toda a parte de cima do card */
 .cards-noticias article img {
     width: calc(100% + 40px);
 
@@ -382,13 +383,14 @@ button:focus {
 
     margin-top: -20px;
 
+    /* Isso mantém as imagens dos cards no formato de vídeo 16:9 */
     aspect-ratio: 16 / 9;
 
     object-fit: cover;
 }
 
 
-/* LINK NO FINAL DOS CARDS */
+/* Aqui eu empurro o link para o final do card para os cards ficarem mais alinhados */
 .cards-noticias article a {
     margin-top: auto;
 
@@ -396,9 +398,7 @@ button:focus {
 }
 
 
-/* =========================
-   CARROSSEL
-========================= */
+/* Aqui eu controlo o layout do carrossel de destaques */
 
 #carrossel {
     margin-bottom: 45px;
@@ -428,7 +428,7 @@ button:focus {
 }
 
 
-/* BOTÕES DO CARROSSEL */
+/* Aqui eu mudo o tamanho, cor e formato das setas do carrossel */
 #botao-anterior,
 #botao-proximo {
     background-color: #b30000;
@@ -471,9 +471,7 @@ button:focus {
 }
 
 
-/* =========================
-   MENSAGEM SECRETA
-========================= */
+/* Aqui eu estilizo a área da mensagem secreta */
 
 #mensagem-secreta {
     background-color: #111111;
@@ -500,13 +498,13 @@ button:focus {
 }
 
 
-/* TEXTO ESCONDIDO */
+/* Essa classe esconde um elemento. O JavaScript remove/adiciona ela quando precisa */
 .escondido {
     display: none;
 }
 
 
-/* BOTÃO SECRETO */
+/* Aqui eu estilizo o botão que revela a mensagem secreta */
 #botao-secreto {
     background-color: #b30000;
 
@@ -535,9 +533,7 @@ button:focus {
 }
 
 
-/* =========================
-   ASIDE
-========================= */
+/* Aqui eu estilizo conteúdos extras que ficam dentro de <aside> nas notícias */
 
 aside {
     background-color: white;
@@ -567,9 +563,7 @@ aside a:hover {
 }
 
 
-/* =========================
-   RODAPÉ
-========================= */
+/* Aqui eu mudo o fundo, cor e espaço do rodapé */
 
 footer {
     background-color: #111111;
@@ -586,14 +580,13 @@ footer {
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* Quando a tela fica com 900px ou menos, essas regras entram em ação para tablet */
 
 @media (max-width: 900px) {
 
     .cards-noticias {
         grid-template-columns:
+            /* No tablet eu diminuo para 2 cards por linha */
             repeat(2, 1fr);
     }
 
@@ -605,7 +598,7 @@ footer {
 }
 
 
-/*  CELULAR */
+/* Quando a tela fica com 600px ou menos, aqui começa a versão de celular */
 
 @media (max-width: 600px) {
 
@@ -675,6 +668,7 @@ footer {
     }
 
     .cards-noticias {
+        /* No celular eu deixo só 1 card por linha */
         grid-template-columns: 1fr;
     }
 
@@ -713,6 +707,7 @@ footer {
     opacity: 1;
     transform: translateX(0);
     transition:
+        /* Aqui eu mudo a velocidade da transição do carrossel */
         opacity 0.4s ease,
         transform 0.4s ease;
 }
@@ -724,9 +719,11 @@ footer {
 
 #plantao-clarim {
     position: fixed;
+    /* Esses dois valores mudam a posição do Plantão na tela */
     right: 20px;
     bottom: 20px;
 
+    /* Aqui eu mudo a largura máxima da caixinha do Plantão */
     max-width: 360px;
 
     background-color: #111111;
@@ -744,6 +741,7 @@ footer {
     z-index: 1000;
 
     transition:
+        /* Aqui eu mudo a velocidade da transição do carrossel */
         opacity 0.4s ease,
         transform 0.4s ease;
 }
@@ -759,12 +757,10 @@ footer {
     transform: translateY(0);
 }
 
-/* ========================================
-   EASTER EGG - PERSEGUIÇÃO
-======================================== */
+/* Aqui começa todo o visual do Easter Egg da perseguição */
 
 
-/* Aranha escondida no canto */
+/* Aqui eu controlo a aranha secreta: posição, tamanho e transparência */
 
 #aranha-secreta {
     position: fixed;
@@ -775,6 +771,7 @@ footer {
     background: transparent;
     border: none;
 
+    /* Aqui eu mudo o tamanho da aranha secreta */
     font-size: 26px;
 
     padding: 4px;
@@ -798,15 +795,14 @@ footer {
 
 
 
-/* ========================================
-   TELA DO EASTER EGG
-======================================== */
+/* Aqui eu crio a tela escura que cobre o site quando o Easter Egg começa */
 
 #easter-corrida {
     position: fixed;
 
     inset: 0;
 
+    /* O último número controla o quanto a tela fica escura. Mais perto de 1 = mais escuro */
     background: rgba(0, 0, 0, 0.78);
 
     z-index: 5000;
@@ -826,9 +822,7 @@ footer {
 
 
 
-/* ========================================
-   AVISO
-======================================== */
+/* Aqui eu estilizo o aviso 'PERIGO NO CLARIM!' */
 
 .alerta-easter {
     position: absolute;
@@ -857,13 +851,12 @@ footer {
 
 
 
-/* ========================================
-   PAULO / HOMEM-ARANHA
-======================================== */
+/* Aqui eu mudo o tamanho e a posição inicial da imagem do Paulo/Homem-Aranha */
 
 #paulo-aranha {
     position: absolute;
 
+    /* Aqui eu mudo o tamanho do Paulo/Homem-Aranha */
     width: 130px;
 
     left: -180px;
@@ -874,13 +867,12 @@ footer {
 
 
 
-/* ========================================
-   DUENDE VERDE
-======================================== */
+/* Aqui eu mudo o tamanho e a posição inicial do Duende */
 
 #duende-wrapper {
     position: absolute;
 
+    /* Aqui eu mudo o tamanho do bloco do Duende */
     width: 140px;
 
     left: -220px;
@@ -891,6 +883,7 @@ footer {
 
 
 #professor-duende {
+    /* Aqui eu mudo o tamanho do bloco do Duende */
     width: 140px;
 
     display: block;
@@ -898,9 +891,7 @@ footer {
 
 
 
-/* ========================================
-   BALÃO DO DUENDE
-======================================== */
+/* Aqui eu mudo o tamanho, posição e aparência do balão de fala do Duende */
 
 #balao-duende {
     position: absolute;
@@ -937,7 +928,7 @@ footer {
 
 
 
-/* Pontinha do balão */
+/* Aqui eu crio a pontinha do balão usando bordas */
 
 #balao-duende::after {
     content: "";
@@ -960,29 +951,28 @@ footer {
 
 
 
-/* ========================================
-   ANIMAÇÕES
-======================================== */
+/* Aqui eu escolho a duração e o atraso das animações do Easter Egg */
 
 .easter-ativo #paulo-aranha {
+    /* 5s é o tempo que o Paulo leva para completar o caminho */
     animation: volta-paulo 5s ease-in-out forwards;
 }
 
 
 .easter-ativo #duende-wrapper {
+    /* 0.45s é o atraso para o Duende começar depois do Paulo */
     animation: volta-duende 5s ease-in-out 0.45s forwards;
 }
 
 
 .easter-ativo #balao-duende {
+    /* 1.4s é quanto tempo o balão espera antes de aparecer */
     animation: aparecer-balao 0.4s ease 1.4s forwards;
 }
 
 
 
-/* ========================================
-   CAMINHO DO PAULO
-======================================== */
+/* Aqui eu desenho o caminho que o Paulo faz pela tela. Cada porcentagem é uma parte do percurso */
 
 @keyframes volta-paulo {
 
@@ -1079,9 +1069,7 @@ footer {
 
 
 
-/* ========================================
-   CAMINHO DO DUENDE
-======================================== */
+/* Aqui eu desenho o caminho do Duende. Ele segue um pouco atrás do Paulo */
 
 @keyframes volta-duende {
 
@@ -1178,9 +1166,7 @@ footer {
 
 
 
-/* ========================================
-   APARIÇÃO DO BALÃO
-======================================== */
+/* Aqui eu controlo como o balão aparece, começando pequeno e ficando no tamanho normal */
 
 @keyframes aparecer-balao {
 
@@ -1201,9 +1187,7 @@ footer {
 
 
 
-/* ========================================
-   MOBILE
-======================================== */
+/* Aqui eu diminuo os personagens e o balão do Easter Egg para caberem melhor no celular */
 
 @media (max-width: 600px) {
 
